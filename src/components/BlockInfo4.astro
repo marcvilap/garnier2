@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+import TextBox from '$components/TextBox.astro'
+import imgA from '$assets/images/info-04a.webp'
+import imgB from '$assets/images/info-04b.webp'
+---
+
+<Container fixTop>
+	<Columns inverse>
+		<Fragment slot="col-1">
+			<TextBox title="El sol solo hace daño en verano">
+				<p>También hay quien afirma que solo hay que protegerse del sol en verano, ya que su intensidad es mayor. Es cierto que la intensidad de los rayos UV es mayor en verano, pero los rayos UV están presentes durante todo el año. Incluso en días nublados y en invierno, <strong>los rayos UV penetran la atmósfera y causan daño a la piel</strong>.</p>
+				<p>La exposición acumulativa a los rayos UV a lo largo del año contribuye a problemas de la piel como el envejecimiento prematuro u otras enfermedades. Por eso es muy importante utilizar el serum y ser constantes todos los días del año.</p>
+			</TextBox>
+		</Fragment>
+		<Fragment slot="col-2">
+			<div class="container-inline-size">
+				<Image class="w-[64cqw] lg:animate-parallax-t" src={imgA} width={636} alt="" />
+				<Image class="-mt-[24cqw] ml-auto w-[33cqw] lg:animate-parallax-b" src={imgB} width={328} alt="" />
+			</div>
+		</Fragment>
+	</Columns>
+</Container>

@@ -1,0 +1,11 @@
+---
+import { Image } from 'astro:assets'
+import imgLogo from '$assets/images/logo.webp'
+---
+
+<footer class="relative bg-yellow-300">
+	<div class="container flex flex-col items-center gap-6 pb-12 text-center">
+		<p>ElTiempo Content para</p>
+		<Image class="w-48" src={imgLogo} width={384} alt="" />
+	</div>
+</footer>

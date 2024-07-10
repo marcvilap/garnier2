@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: swap;
+		src: url(./assets/fonts/inter.woff2) format('woff2-variations');
+	}
+	@font-face {
+		font-family: 'Bodoni Moda';
+		font-style: italic;
+		font-weight: 400 900;
+		font-display: swap;
+		src: url(./assets/fonts/bodoni-moda-italic.woff2) format('woff2-variations');
+	}
+	@media (max-width: 400px) {
+		html {
+			font-size: 4vw;
+		}
+	}
+	@media (min-width: 1281px) {
+		html {
+			font-size: 1.25vw;
+		}
+	}
+	@media (min-width: 1920px) {
+		html {
+			font-size: 24px;
+		}
+	}
+	html {
+		-webkit-tap-highlight-color: transparent;
+		@apply touch-manipulation antialiased;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-balance;
+	}
+	p {
+		@apply text-pretty;
+	}
+}
+
+/* REVEAL EFFECT
+	****************************************************************************************************/
+.group-reveal [class^='reveal-'] {
+	opacity: 0;
+}
+.group-revealed [class^='reveal-'] {
+	transition-duration: 1s;
+	transition-property: opacity, transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	will-change: opacity, transform;
+}
+.group-reveal .reveal-t {
+	transform: translateY(6rem);
+}
+.group-reveal .reveal-l {
+	transform: translateX(6rem);
+}
+.group-reveal .reveal-r {
+	transform: translateX(-6rem);
+}
+.group-revealed .reveal-delay-200 {
+	transition-delay: 200ms;
+}
+.group-revealed .reveal-delay-300 {
+	transition-delay: 300ms;
+}
+
+.group-reveal .reveal-img {
+	opacity: 1;
+	transform: scale(1.25);
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.group-revealed .reveal-img {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	transition-property: transform, clip-path;
+	will-change: transform, clip-path;
+}
+
+@screen lg {
+}

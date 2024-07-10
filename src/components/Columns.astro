@@ -1,0 +1,16 @@
+---
+interface Props {
+	inverse?: boolean
+}
+
+const { inverse } = Astro.props
+---
+
+<div class="group-reveal grid items-center gap-12 lg:grid-cols-2 xl:gap-24">
+	<div class={inverse ? 'reveal-l lg:order-2' : 'reveal-r'}>
+		<slot name="col-1" />
+	</div>
+	<div class={inverse ? 'reveal-r' : 'reveal-l'}>
+		<slot name="col-2" />
+	</div>
+</div>

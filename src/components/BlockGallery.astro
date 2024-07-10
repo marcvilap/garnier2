@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets'
+import img01 from '$assets/images/gallery-01.webp'
+import img02 from '$assets/images/gallery-02.webp'
+import img03 from '$assets/images/gallery-03.webp'
+import img04 from '$assets/images/gallery-04.webp'
+import img05 from '$assets/images/gallery-05.webp'
+import img06 from '$assets/images/gallery-06.webp'
+import img07 from '$assets/images/gallery-07.webp'
+import img08 from '$assets/images/gallery-08.webp'
+---
+
+<section class="overflow-clip">
+	<div class="flex lg:animate-parallax-l">
+		<Image class="h-[24vw] w-[36vw] shrink-0 object-cover" src={img01} height="600" alt="" />
+		<Image class="h-[24vw] w-[19vw] shrink-0 object-cover" src={img02} height="600" alt="" />
+		<Image class="h-[24vw] w-[28vw] shrink-0 object-cover" src={img03} height="600" alt="" />
+		<Image class="h-[24vw] w-[17vw] shrink-0 object-cover" src={img04} height="600" alt="" />
+		<Image class="h-[24vw] w-[27vw] shrink-0 object-cover" src={img05} height="600" alt="" />
+		<Image class="h-[24vw] w-[18vw] shrink-0 object-cover" src={img06} height="600" alt="" />
+		<Image class="h-[24vw] w-[32vw] shrink-0 object-cover" src={img07} height="600" alt="" />
+		<Image class="h-[24vw] w-[23vw] shrink-0 object-cover" src={img08} height="600" alt="" />
+	</div>
+	<div class="flex flex-row-reverse lg:animate-parallax-r">
+		<Image class="h-[24vw] w-[23vw] shrink-0 object-cover" src={img08} height="600" alt="" />
+		<Image class="h-[24vw] w-[32vw] shrink-0 object-cover" src={img07} height="600" alt="" />
+		<Image class="h-[24vw] w-[18vw] shrink-0 object-cover" src={img06} height="600" alt="" />
+		<Image class="h-[24vw] w-[27vw] shrink-0 object-cover" src={img05} height="600" alt="" />
+		<Image class="h-[24vw] w-[17vw] shrink-0 object-cover" src={img04} height="600" alt="" />
+		<Image class="h-[24vw] w-[28vw] shrink-0 object-cover" src={img03} height="600" alt="" />
+		<Image class="h-[24vw] w-[19vw] shrink-0 object-cover" src={img02} height="600" alt="" />
+		<Image class="h-[24vw] w-[36vw] shrink-0 object-cover" src={img01} height="600" alt="" />
+	</div>
+</section>

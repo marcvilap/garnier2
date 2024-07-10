@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+import TextBox from '$components/TextBox.astro'
+import imgA from '$assets/images/info-02a.webp'
+import imgB from '$assets/images/info-02b.webp'
+---
+
+<Container fixTop>
+	<Columns>
+		<Fragment slot="col-1">
+			<TextBox title="Necesitamos la vitamina D pero, ¿bloquea la crema su absorción?">
+				<p>La exposición al sol es importante para la producción de vitamina D y ésta contribuye al mantenimiento de los huesos y disminuye el riesgo de muchas enfermedades, ya que ayuda a reforzar nuestro sistema inmunitario. Quizá el argumento más difícil de rebatir sea que la crema solar puede bloquear la absorción de la vitamina D.</p>
+				<p>Si bien, no existe crema que te proteja totalmente de la exposición al sol, la solución a este dilema es sencilla, ya que existen cremas como <a class="font-bold text-yellow-500 underline hover:no-underline" target="_blank" href="https://www.garnier.es/marcas/fluidos-antimanchas-uv">Vitamina C Anti-UV Diario</a> de Garnier que combinan la vitamina C con una protección solar de FPS +50. Sin duda, un combo perfecto para disfrutar de las bondades de la luz solar sabiéndote protegida.</p>
+			</TextBox>
+		</Fragment>
+		<Fragment slot="col-2">
+			<div class="container-inline-size">
+				<Image class="ml-auto w-[85cqw] lg:animate-parallax-t" src={imgA} width={844} alt="" />
+				<Image class="-mt-[30cqw] w-[40cqw] lg:animate-parallax-b" src={imgB} width={398} alt="" />
+			</div>
+		</Fragment>
+	</Columns>
+</Container>

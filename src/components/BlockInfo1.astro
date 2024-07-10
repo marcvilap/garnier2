@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+import imgA from '$assets/images/info-01a.webp'
+---
+
+<Container>
+	<Columns>
+		<Fragment slot="col-1">
+			<div class="container-inline-size relative">
+				<div class="lg:animate-parallax-b">
+					<Image class="aspect-[4/3] object-cover lg:translate-x-24" src={imgA} width={992} alt="" />
+				</div>
+				<span class="absolute -left-[45cqw] top-1/2 w-[90cqw] origin-top -rotate-90 font-serif text-[12cqw] uppercase italic leading-none text-yellow-300">Desmintiendo mitos:</span>
+			</div>
+		</Fragment>
+		<Fragment slot="col-2">
+			<div class="relative grid gap-6 bg-yellow-300 p-6 font-medium lg:-ml-24">
+				<p>Si usas TikTok puede que ya hayas oído hablar de uno de los últimos bulos de moda: el callo solar. Y si no tienes ni idea de lo que hablamos, te lo resumimos. El bulo extendido por algunos influencers y famosos afirma que la exposición continuada al sol genera una resistencia en la piel a las quemaduras y otras enfermedades y que, por tanto, no hace falta aplicarse protección solar.</p>
+				<p>Para combatir todos estos mitos, confiamos en la ciencia y el trabajo de expertos y marcas de confianza como <a class="font-bold underline hover:no-underline" href="https://www.garnier.es/marcas/fluidos-antimanchas-uv">Garnier</a>, que esta temporada nos trae un producto que se convertirá en un infalible dentro de nuestra bolsa de playa.</p>
+			</div>
+		</Fragment>
+	</Columns>
+</Container>

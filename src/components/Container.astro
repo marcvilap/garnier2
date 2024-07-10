@@ -1,0 +1,14 @@
+---
+interface Props {
+	bgYellow?: boolean
+	fixTop?: boolean
+}
+
+const { bgYellow, fixTop } = Astro.props
+---
+
+<section class:list={['relative overflow-clip', bgYellow ? 'bg-yellow-300' : 'bg-white', fixTop && '-mt-12 xl:-mt-16']}>
+	<div class="container py-24 xl:py-32">
+		<slot />
+	</div>
+</section>

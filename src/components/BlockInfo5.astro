@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+import Container from '$components/Container.astro'
+import Columns from '$components/Columns.astro'
+import TextBox from '$components/TextBox.astro'
+import imgA from '$assets/images/info-05a.webp'
+import imgB from '$assets/images/info-05b.webp'
+---
+
+<Container>
+	<Columns>
+		<Fragment slot="col-1">
+			<TextBox title="El impacto de las cremas grasas">
+				<p>Hay cremas que te pueden dejar una sensación grasosa en el cuerpo y si bien suelen ser muy hidratantes, puede ser un poco pesadas o potenciar la aparición de acné. El <a class="font-bold text-yellow-500 underline hover:no-underline" target="_blank" href="https://www.garnier.es/marcas/fluidos-antimanchas-uv">Vitamina C Anti-UV Diario</a> de Garnier tiene una <strong>textura ligera, no grasa y no pegajosa con dos fórmulas</strong>. Por una parte, una con glow que contiene pigmentos minerales para un aspecto más luminoso (apta para todos tonos de piel), y por otra invisible. Ambas son no grasas y evitan el rastro blanco habitual que suelen dejar las cremas con fotoprotección.</p>
+			</TextBox>
+		</Fragment>
+		<Fragment slot="col-2">
+			<div class="container-inline-size">
+				<Image class="ml-auto w-[28cqw] lg:animate-parallax-t" src={imgA} width={476} alt="" />
+				<Image class="-mt-[64cqw] w-[64cqw] lg:animate-parallax-b" src={imgB} width={486} alt="" />
+			</div>
+		</Fragment>
+	</Columns>
+</Container>

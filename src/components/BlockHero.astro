@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets'
+import imgLogo from '$assets/images/logo.webp'
+import imgHero01 from '$assets/images/hero-01.webp'
+import imgHero02 from '$assets/images/hero-02.webp'
+---
+
+<section class="relative bg-yellow-800 text-center font-serif font-semibold italic text-white">
+	<div class="sticky top-0 h-0">
+		<Image class="h-screen w-full object-cover opacity-60" src={imgHero01} width={1920} alt="" />
+	</div>
+
+	<div class="group-reveal container relative flex flex-col items-center gap-12 py-24">
+		<a href="/">
+			<span class="mb-3 block text-xs">Verano seguro<br />Un proyecto de</span>
+			<Image class="w-48" src={imgLogo} width={384} alt="" />
+		</a>
+
+		<div class="container-inline-size relative flex aspect-[2/1] w-full max-w-2xl flex-col items-center justify-center overflow-clip">
+			<Image class="reveal-img absolute left-0 top-0 size-full object-cover" src={imgHero02} width={1344} alt="" />
+			<h1 class="reveal-t reveal-delay-200 relative max-w-[64cqw] text-[8cqw] uppercase leading-none text-yellow-300">Desmintiendo mitos:</h1>
+			<h2 class="reveal-t reveal-delay-300 relative mt-[4cqw] max-w-[48cqw] text-[5cqw] leading-none">La verdad sobre la Vitamina C y el sol</h2>
+		</div>
+
+		<h3 class="reveal-t max-w-2xl text-2xl">Proteger tu piel del sol es esencial para prevenir manchas y enfermedades; una buena rutina de cuidado, con protección solar e hidratación, puede marcar la diferencia.</h3>
+	</div>
+</section>
